@@ -1,11 +1,11 @@
 import os
 
-homePath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT"
-poleRegCERPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2024" #Try to automate the choice of this folder later
-pfh10RepairsPath = r"C:\Users\503404681\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS"
+homePath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Attente validation client"
+poleRegCERPath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2024" #Try to automate the choice of this folder later
+pfh10RepairsPath = r"C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS"
 pfh10RepairsEndPartBE = r"03-CER-PREE\02-CER indB - BE"
-testPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT\IS0-800396 7 Distributeurs 6 Bobines  4 CS1 2 CS2 CP0-CP1"
-tryPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT\Essai"
+#testPath = r"C:\Users\jt30320l\Box Sync\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\Test"
+#tryPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT\Essai"
 
 def thereIsOnlyDirs(subPath): # Check if there is only directories in this folder
     obj = os.scandir(subPath) #Scan the dir and get iterable object
@@ -211,7 +211,6 @@ def copyFilesToPFH10(sourcePath, targetPath, endPart):
             newSourcePath = os.path.join(sourcePath, entry.name)
             copyFilesToPFH10(newSourcePath, targetPath, endPart)
     else:
-        print
         target = selectTargetDirectory(sourcePath, targetPath, endPart)
         if target == "":
             pass
@@ -226,5 +225,5 @@ def copyFilesToPFH10(sourcePath, targetPath, endPart):
 #command = f'robocopy "{a}" "{b}" CER* /COPY:DATSO /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
 #os.system(command)
 
-#copyFilesToPoleReg(homePath, poleRegCERPath)
+copyFilesToPoleReg(homePath, poleRegCERPath)
 copyFilesToPFH10(homePath, pfh10RepairsPath, pfh10RepairsEndPartBE)
