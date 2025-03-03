@@ -182,12 +182,11 @@ def findTargetDirectory(buffer, targetPath, endPart):
                         newTargetPath = os.path.join(targetPath, entry2.name)
                         msg = f'Le n° PT est absent ou son format est mauvais dans : "{newTargetPath}".\n'
                         writeToInternalLog(msg)
-                        return "" 
         else:
             newTargetPath = os.path.join(targetPath, entry.name)
             msg = f'L\'OTP est absent ou son format est mauvais dans : "{newTargetPath}".\n'
             writeToInternalLog(msg)
-            return "" 
+    return ""
 
 def selectTargetDirectory(sourcePath, targetPath, endPart):
     dirName = getCERName(sourcePath)
