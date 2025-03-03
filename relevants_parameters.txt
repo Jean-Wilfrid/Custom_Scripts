@@ -1,0 +1,28 @@
+Options de copie :
+/E :: copie les sous-répertoires, y compris les vides.
+
+/COPY:indicateurscopie :: spécifie les éléments à copier pour les
+                                    fichiers (/COPY:DAT par défaut).
+                       (copyflags : D=Données, A=Attributs, T=Horodatages, X=Ignorer les flux de données Alt).
+                                    (S=Sécurité=ACL NTFS, O=infos prOpriétaire,
+                                    U=infos d’aUdit)
+
+/COPYALL :: copie toutes les infos de fichiers
+                                    (équivaut à /COPY:DATSOU)
+
+/MT[:n] :: Effectuer des copies multi-thread avec n threads (par défaut, 8).
+                                    n doit être au moins égal à 1 et non supérieur à 128.
+                                    Cette option est incompatible avec les options /IPG et /EFSRAW.
+                       Redirige la sortie avec l’option /LOG pour de meilleures performances.
+
+/DCOPY:indicateur(s)copie :: éléments à copier pour les répertoires (valeur par défaut : /DCOPY:DA).
+                       (copyflags : D=Données, A=Attributs, T=Horodatages, E=EAs, X=Ignorer les flux de données Alt)
+
+Options d’enregistrement dans le journal :
+/LOG:fichier :: copie le statut dans le fichier journal
+                                    (remplace le journal existant)
+/ETA :: affiche l’heure de fin estimée de la copie
+                                    des fichiers
+
+/TEE :: résultat dans la fenêtre de la console et
+                                    dans le fichier journal
