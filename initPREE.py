@@ -6,6 +6,7 @@ The aim of this code is to setup the working folder at the begining of a PREE
 
 import os
 
+#The copy of the FA is missing should be added and automated
 dest = r"C:\Temp_Perso\PREE\IS0-800555\AEH SMR PT15736_E"
 sourcePFH01 = r"C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en état\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR"
 sourcePFH10 = r"C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS\IS0-800555 - CHOOZ et CIVAUX - 6 AEH\AEH SMR MP - PT15736\03-CER-PREE\01-CER indA - Atelier"
