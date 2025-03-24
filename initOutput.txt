@@ -3,102 +3,67 @@
    ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
 -------------------------------------------------------------------------------
 
-  DÇmarrageˇ: mardi 18 mars 2025 16:33:28
-   Source : C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\
-     Dest : C:\Temp_Perso\PREE\IS0-800555\AEH SMR PT15736_E\
+  DÇmarrageˇ: lundi 24 mars 2025 16:23:25
+   Source : C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\
+     Dest : C:\Temp_Perso\
 
     Fichiers : *.*
 	    
-Fich. exclus : *.pdf
-	    *.xlsx
-	    
-  Options : *.* /TEE /S /E /DCOPY:EDAT /COPY:DAT /ETA /MT:8 /R:1000000 /W:30 
+  Options : *.* /TEE /S /E /DCOPY:EDT /COPY:DT /ETA /MT:8 /R:1000000 /W:30 
 
 -------------------------------------------------------------------------------
 
-	  Nouveau fichier		   4.3 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6840.JPG  0%  100%  
-	  Nouveau fichier		   4.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6841.JPG100%  
-	  Nouveau fichier		   3.8 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6842.JPG100%  
-	  Nouveau fichier		   4.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6843.JPG100%  
-	  Nouveau fichier		   4.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6844.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6845.JPG100%  
-	  Nouveau fichier		   4.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6846.JPG100%  
-	  Nouveau fichier		   4.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6847.JPG100%  
-	  Nouveau fichier		   5.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6848.JPG100%  
-	  Nouveau fichier		   4.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6849.JPG 46%  100%  
-	  Nouveau fichier		  10.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6850.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6851.JPG100%  
-	  Nouveau fichier		   5.4 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6852.JPG100%  
-	  Nouveau fichier		   6.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6853.JPG100%  
-	  Nouveau fichier		   4.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6854.JPG100%  
-	  Nouveau fichier		   4.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6855.JPG100%  
-	  Nouveau fichier		   4.4 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6856.JPG100%  
-	  Nouveau fichier		   5.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6857.JPG100%  
-	  Nouveau fichier		   5.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6858.JPG100%  
-	  Nouveau fichier		   5.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6859.JPG100%  
-	  Nouveau fichier		   4.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6860.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6861.JPG100%  
-	  Nouveau fichier		   3.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6862.JPG100%  
-	  Nouveau fichier		   5.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6863.JPG100%  
-	  Nouveau fichier		   4.3 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6867.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6871.JPG100%  
-	  Nouveau fichier		   4.5 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6872.JPG100%  
-	  Nouveau fichier		   5.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6873.JPG100%  
-	  Nouveau fichier		   6.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6874.JPG100%  
-	  Nouveau fichier		   4.3 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6875.JPG100%  
-	  Nouveau fichier		   4.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6876.JPG100%  
-	  Nouveau fichier		   4.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6877.JPG100%  
-	  Nouveau fichier		   4.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6878.JPG  0%  100%  
-	  Nouveau fichier		   6.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6879.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6880.JPG100%  
-	  Nouveau fichier		   4.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6881.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6882.JPG100%  
-	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6883.JPG100%  
-	  Nouveau fichier		   3.4 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6884.JPG100%  
-	  Nouveau fichier		   3.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6885.JPG100%  
-	  Nouveau fichier		   4.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT15736_E - AEH SMR\PHOTOS\IMG_6886.JPG100%  
+	  Nouveau fichier		   4.4 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\754W45069_MB - CER25-007 AEH SMR - 750S50255 PT25118B.pdf  0%   11%   22%   56%   79%  100%  
+	  Nouveau fichier		  13.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\754W45069_MB - CER25-007 AEH SMR - 750S50255 PT25118B.xlsx100%  
+	  Nouveau fichier		  388125	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\OF  41002719 P .pdf100%  
+	  Nouveau fichier		   4.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6906.JPG100%  
+	  Nouveau fichier		   3.8 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6907.JPG100%  
+	  Nouveau fichier		   4.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6908.JPG100%  
+	  Nouveau fichier		   4.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6909.JPG100%  
+	  Nouveau fichier		   3.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6910.JPG100%  
+	  Nouveau fichier		   3.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6911.JPG100%  
+	  Nouveau fichier		   4.3 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6912.JPG100%  
+	  Nouveau fichier		   4.8 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6913.JPG100%  
+	  Nouveau fichier		   4.5 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6914.JPG100%  
+	  Nouveau fichier		   3.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6915.JPG100%  
+	  Nouveau fichier		   6.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6916.JPG100%  
+	  Nouveau fichier		   5.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6917.JPG100%  
+	  Nouveau fichier		   6.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6918.JPG100%  
+	  Nouveau fichier		   5.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6919.JPG100%  
+	  Nouveau fichier		   5.9 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6920.JPG100%  
+	  Nouveau fichier		   5.5 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6921.JPG100%  
+	  Nouveau fichier		   4.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6922.JPG100%  
+	  Nouveau fichier		   5.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6923.JPG100%  
+	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6924.JPG 37%  100%  
+	  Nouveau fichier		   3.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6925.JPG100%  
+	  Nouveau fichier		   3.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6926.JPG100%  
+	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6927.JPG100%  
+	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6928.JPG100%  
+	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6929.JPG100%  
+	  Nouveau fichier		   4.2 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6930.JPG100%  
+	  Nouveau fichier		   6.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6931.JPG100%  
+	  Nouveau fichier		   5.4 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6932.JPG100%  
+	  Nouveau fichier		   2.7 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6933.JPG100%  
+	  Nouveau fichier		   2.6 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6934.JPG100%  
+	  Nouveau fichier		   5.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6935.JPG100%  
+	  Nouveau fichier		   3.8 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6936.JPG100%  
+	  Nouveau fichier		   4.0 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6937.JPG100%  
+	  Nouveau fichier		   4.1 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6938.JPG100%  
+	  Nouveau fichier		   1.8 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6939.JPG100%  
+	  Nouveau fichier		   5.3 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6940.JPG100%  
+	  Nouveau fichier		   5.4 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6948.JPG100%  
+	  Nouveau fichier		   4.5 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH01-Remise en Çtat\2025\IS0-800555 - CHOOZ - CIVAUX\AEH SMR\PT25118_B - AEH SMR\PHOTOS\IMG_6949.JPG100%  
 
 -------------------------------------------------------------------------------
 
                Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
      RÇpˇ:         2         2         1         0         0         0
-Fichiersˇ:        44        41         3         0         0         0
-  Octetsˇ:  217.54 m  195.75 m   21.78 m         0         0         0
-   Heures:   0:00:04   0:00:00                       0:00:00   0:00:00
+Fichiersˇ:        40        40         0         0         0         0
+  Octetsˇ:  183.31 m  183.31 m         0         0         0         0
+   Heures:   0:01:04   0:00:06                       0:00:00   0:00:00
 
 
-   DÇbitˇ:           391ˇ731ˇ146 Octets/sec.
-   DÇbitˇ:             22415,035 MÇga-octets/min.
-   Fin : mardi 18 mars 2025 16:33:28
-
-
--------------------------------------------------------------------------------
-   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
--------------------------------------------------------------------------------
-
-  DÇmarrageˇ: mardi 18 mars 2025 16:33:29
-   Source : C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS\IS0-800555 - CHOOZ et CIVAUX - 6 AEH\AEH SMR MP - PT15736\03-CER-PREE\01-CER indA - Atelier\
-     Dest : C:\Temp_Perso\PREE\IS0-800555\AEH SMR PT15736_E\
-
-    Fichiers : *.*
-	    
-  Options : *.* /TEE /S /E /DCOPY:EDAT /COPY:DAT /ETA /MT:8 /R:1000000 /W:30 
-
--------------------------------------------------------------------------------
-
-	*RÇp. SUPPL.      -1	C:\Temp_Perso\PREE\IS0-800555\AEH SMR PT15736_E\PHOTOS\
-	  Nouveau fichier		   4.5 m	C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS\IS0-800555 - CHOOZ et CIVAUX - 6 AEH\AEH SMR MP - PT15736\03-CER-PREE\01-CER indA - Atelier\754W45069_MB - CER25-006 AEH SMR - 750S50255 PT15736E (1).pdf  0%  100%  
-
--------------------------------------------------------------------------------
-
-               Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
-     RÇpˇ:         1         1         1         0         0         1
-Fichiersˇ:         1         1         0         0         0         0
-  Octetsˇ:    4.56 m    4.56 m         0         0         0         0
-   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
-
-
-   DÇbitˇ:           281ˇ808ˇ117 Octets/sec.
-   DÇbitˇ:             16125,189 MÇga-octets/min.
-   Fin : mardi 18 mars 2025 16:33:29
+   DÇbitˇ:           30ˇ021ˇ064 Octets/sec.
+   DÇbitˇ:             1717,819 MÇga-octets/min.
+   Fin : lundi 24 mars 2025 16:23:32
 
