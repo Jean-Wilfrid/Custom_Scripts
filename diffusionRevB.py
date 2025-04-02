@@ -1,4 +1,5 @@
 import os
+from internalLog import writeToInternalLog
 
 homePath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Attente validation client"
 poleRegCERPath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2024" #Try to automate the choice of this folder later
@@ -27,12 +28,6 @@ def getCERName(parentPath):
             break
     
     return rawName
-
-def writeToInternalLog(msg):
-    print(msg)
-    file = open("internal_log.txt", "a+", encoding="utf-8")
-    file.write(msg)
-    file.close()
 
 def removeExtension(rawName):
     try:
