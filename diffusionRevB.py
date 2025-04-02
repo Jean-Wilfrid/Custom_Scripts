@@ -41,15 +41,11 @@ def removeExtension(rawName):
     rawName.append(buffer[0]) #Get back last part without the extension name in the main list
     return rawName
 
-
-def createTargetDirectoryName(buffer): 
-
-    finalLine = ""
-    #Getting id number
+def getIDNumber(buffer : str) -> tuple[str,int]:
     try: #In this case the filename begin with CER followed by a space i.e CER 24-10
         nums = buffer[1].split("-")
         num = int (nums[1])
-        i = 2 #This is the index of the first part of the machine's name its value change according to name's beginning
+        i = 2 #This is the index of the first part of the machine's name. Its value change according to name's beginning
     except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-10
         try:
             nums = buffer[0].split("-") 
@@ -58,17 +54,16 @@ def createTargetDirectoryName(buffer):
         except IndexError:
             msg = "Le format du nom du fichier CER ne permet pas la création du dossier.\n"
             writeToInternalLog(msg)
-            return ""
+            return "", i
 
     if num < 10 : #Adding a 0 at the beginnig to keep the naming style
         num = "0" + str(num)
     else:
         num = str(num)
+    
+    return num, i
 
-    #Getting OTP
-    otp = buffer[-1]
-
-    #Getting machine's name
+def getMachinesName(buffer :str, i : int) -> str:
     name = ""
     try:
         index = 1
@@ -82,7 +77,25 @@ def createTargetDirectoryName(buffer):
             name += " "
             i += 1
         name += buffer[index - 1]
-        #Final Line Merging
+
+    return name
+
+
+def createTargetDirectoryName(buffer): 
+
+    #Getting id number
+    num,i = getIDNumber(buffer)
+
+    #Getting OTP
+    otp = buffer[-1]
+
+    #Getting machine's name
+    name = getMachinesName(buffer, i)
+
+    #Final Line Merging
+    if num =="" or otp == "" or name =="": #If there is any error, the line is set to empty
+        finalLine = ""
+    else:
         finalLine = num + " " + otp + " " + name
 
     return finalLine
