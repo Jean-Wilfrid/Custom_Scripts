@@ -122,8 +122,6 @@ def createTargetDirectory (sourcePath, targetPath):
 
     return finalPath
 
-#def writeDirNameToFile ():
-
 def copyFilesToPoleReg(sourcePath, targetPath):
     obj = os.scandir(sourcePath)
     if thereIsOnlyDirs(sourcePath):
