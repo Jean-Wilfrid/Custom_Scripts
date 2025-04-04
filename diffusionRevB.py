@@ -1,5 +1,6 @@
 import os
 from internalLog import writeToInternalLog
+from formatChecker import rightOTPFormat
 
 homePath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Attente validation client"
 poleRegCERPath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2024" #Try to automate the choice of this folder later
@@ -88,6 +89,8 @@ def createTargetDirectoryName(buffer):
 
     #Getting OTP
     otp = buffer[-1]
+    if not rightOTPFormat(otp):
+        otp = ""
 
     #Getting machine's name
     name = getMachinesName(buffer, i)
@@ -140,7 +143,7 @@ def copyFilesToPoleReg(sourcePath, targetPath):
 def getOTPandPT(buffer):
     #Getting OTP
     otp = buffer[-1]
-    if not (otp.startswith("IS0") or otp.startswith("ES0")):
+    if not rightOTPFormat(otp):
         otp = ""
         msg = f'L\'OTP n\'est pas au bon format.\n'
         writeToInternalLog(msg)
@@ -212,8 +215,6 @@ def copyFilesToPFH10(sourcePath, targetPath, endPart):
     obj = os.scandir(sourcePath)
     if thereIsOnlyDirs(sourcePath):
         for entry in obj: #Iterate until you get inside the machine's directory containing both files and directories
-            print("Only Dirs")
-            print(entry.name)
             newSourcePath = os.path.join(sourcePath, entry.name)
             copyFilesToPFH10(newSourcePath, targetPath, endPart)
     else:
@@ -223,13 +224,6 @@ def copyFilesToPFH10(sourcePath, targetPath, endPart):
         else:
             command = f'robocopy "{sourcePath}" "{target}" CER* /COPY:DATSO /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
             os.system(command)
-
-
-#a = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Test"
-#b = r"03-CER-PREE\02-CER indB - BE"
-
-#command = f'robocopy "{a}" "{b}" CER* /COPY:DATSO /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
-#os.system(command)
 
 copyFilesToPoleReg(homePath, poleRegCERPath)
 copyFilesToPFH10(homePath, pfh10RepairsPath, pfh10RepairsEndPartBE)
