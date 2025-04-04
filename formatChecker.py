@@ -27,7 +27,7 @@ def rightPTFormat(pt : str) -> bool:#Check if the string received agrees with PT
     if len(temp) > 1 :#If is seperated by space
         return False
     else:
-        if not (pt.startswith("PT")):
+        if not pt.startswith("PT"):
             return False
         else:
             temp2 =""

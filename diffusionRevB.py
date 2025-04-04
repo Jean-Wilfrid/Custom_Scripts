@@ -1,6 +1,6 @@
 import os
-from internalLog import writeToInternalLog
-from formatChecker import rightOTPFormat
+import internalLog as il
+import formatChecker as fc
 
 homePath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Attente validation client"
 poleRegCERPath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2024" #Try to automate the choice of this folder later
@@ -33,7 +33,7 @@ def removeExtension(rawName):
         buffer = rawName[-1].split(".") #Seperate the last part of the name and the extension name
     except IndexError: #This is certainly due to an emtpy string
         msg = "Il n'y a pas de fichier commençant par 'CER' ou 'CER_B'. Une chaîne vide continue le process.\n"
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return rawName
 
     del rawName[-1] #Delete the whole block
@@ -52,7 +52,7 @@ def getIDNumber(buffer : str) -> tuple[str,int]:
             i = 1 #This is the index of the first part of the machine's name its value change according to name's beginning
         except IndexError:
             msg = "Le format du nom du fichier CER ne permet pas la création du dossier.\n"
-            writeToInternalLog(msg)
+            il.writeToInternalLog(msg)
             return "", i
 
     if num < 10 : #Adding a 0 at the beginnig to keep the naming style
@@ -87,7 +87,7 @@ def createTargetDirectoryName(buffer):
 
     #Getting OTP
     otp = buffer[-1]
-    if not rightOTPFormat(otp):
+    if not fc.rightOTPFormat(otp):
         otp = ""
 
     #Getting machine's name
@@ -107,12 +107,12 @@ def createTargetDirectory (sourcePath, targetPath):
     dirName = removeExtension(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "{sourcePath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
     dirName = createTargetDirectoryName(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "{sourcePath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
     finalPath = os.path.join(targetPath,dirName)
 
@@ -141,10 +141,10 @@ def copyFilesToPoleReg(sourcePath, targetPath):
 def getOTPandPT(buffer):
     #Getting OTP
     otp = buffer[-1]
-    if not rightOTPFormat(otp):
+    if not fc.rightOTPFormat(otp):
         otp = ""
         msg = f'L\'OTP n\'est pas au bon format.\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
 
     #Getting PT
     pt = ""
@@ -158,7 +158,7 @@ def getOTPandPT(buffer):
         if not pt.startswith("PT"):
             pt = ""
             msg = f'Le n° de PT n\'est pas au bon format.\n'
-            writeToInternalLog(msg)
+            il.writeToInternalLog(msg)
 
     return otp, pt
 
@@ -166,7 +166,7 @@ def findTargetDirectory(buffer, targetPath, endPart):
     otp, pt = getOTPandPT(buffer)
     if otp == "" or pt == "":
         msg = f'La sélection du dossier cible n\'est pas possible.\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
 
     obj = os.scandir(targetPath)
@@ -188,11 +188,11 @@ def findTargetDirectory(buffer, targetPath, endPart):
                     else:
                         newTargetPath = os.path.join(targetPath, entry2.name)
                         msg = f'Le n° PT est absent ou son format est mauvais dans : "{newTargetPath}".\n'
-                        writeToInternalLog(msg)
+                        il.writeToInternalLog(msg)
         else:
             newTargetPath = os.path.join(targetPath, entry.name)
             msg = f'L\'OTP est absent ou son format est mauvais dans : "{newTargetPath}".\n'
-            writeToInternalLog(msg)
+            il.writeToInternalLog(msg)
     return ""
 
 def selectTargetDirectory(sourcePath, targetPath, endPart):
@@ -200,12 +200,12 @@ def selectTargetDirectory(sourcePath, targetPath, endPart):
     dirName = removeExtension(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de trouver le dossier CER lié à : "{sourcePath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
     target = findTargetDirectory(dirName, targetPath, endPart)
     if target == "":
         msg = f'La copie n\'est pas possible vers : "{targetPath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
     return target
 
 
