@@ -1,4 +1,5 @@
 import os
+import scan as sc
 import internalLog as il
 import formatChecker as fc
 
