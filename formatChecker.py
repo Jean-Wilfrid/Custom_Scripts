@@ -40,3 +40,6 @@ def rightPTFormat(pt : str) -> bool:#Check if the string received agrees with PT
                 return True
             except ValueError:
                 return False
+
+def toRaw(path : str) -> str:#convert a path to a raw string
+    return fr"{path}"
