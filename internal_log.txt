@@ -1,7 +1,0 @@
-Le n° de PT n'est pas au bon format.
-La sélection du dossier cible n'est pas possible.
-Vérifier le format de ['CER', '25-021', 'Relais', 'de', 'mise', 'en', 'marche', 'PT11983_C', 'IS0-800574'].pdfLa copie n'est pas possible vers : "C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS".
-Le n° de PT n'est pas au bon format.
-La sélection du dossier cible n'est pas possible.
-Vérifier le format de ['CER', '25-021', 'Relais', 'de', 'mise', 'en', 'marche', 'PT11983_C', 'IS0-800574'].pdf
-La copie n'est pas possible vers : "C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS".
