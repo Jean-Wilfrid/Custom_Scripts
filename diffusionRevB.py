@@ -3,12 +3,7 @@ import scan as sc
 import internalLog as il
 import formatChecker as fc
 
-homePath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Attente validation client\IS0-800574 Relais MEM"
-poleRegCERPath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2025" #Try to automate the choice of this folder later
-pfh10RepairsPath = r"C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS"
-pfh10RepairsEndPartBE = r"03-CER-PREE\02-CER indB - BE"
-
-def thereIsOnlyDirs(subPath): # Check if there is only directories in this folder
+def thereIsOnlyDirs(subPath : str) -> bool: # Check if there is only directories in this folder
     obj = os.scandir(subPath) #Scan the dir and get iterable object
     so = True
     for entry in obj:
@@ -18,7 +13,7 @@ def thereIsOnlyDirs(subPath): # Check if there is only directories in this folde
 
     return so
 
-def getCERName(parentPath):
+def getCERName(parentPath : str) -> list[str]:
     obj = os.scandir(parentPath)
 
     rawName = ""
@@ -29,7 +24,7 @@ def getCERName(parentPath):
     
     return rawName
 
-def removeExtension(rawName):
+def removeExtension(rawName : list[str]) -> list[str]:
     try:
         buffer = rawName[-1].split(".") #Seperate the last part of the name and the extension name
     except IndexError: #This is certainly due to an emtpy string
@@ -81,7 +76,7 @@ def getMachinesName(buffer :str, i : int) -> str:
     return name
 
 
-def createTargetDirectoryName(buffer): 
+def createTargetDirectoryName(buffer : list[str]) -> str: 
 
     #Getting id number
     num,i = getIDNumber(buffer)
@@ -102,7 +97,7 @@ def createTargetDirectoryName(buffer):
 
     return finalLine
 
-def createTargetDirectory (sourcePath, targetPath):
+def createTargetDirectory (sourcePath : str, targetPath : str) -> str:
 
     dirName = getCERName(sourcePath)
     dirName = removeExtension(dirName)
@@ -124,7 +119,7 @@ def createTargetDirectory (sourcePath, targetPath):
 
     return finalPath
 
-def copyFilesToPoleReg(sourcePath, targetPath):
+def copyFilesToPoleReg(sourcePath : str, targetPath : str):
     obj = os.scandir(sourcePath)
     if thereIsOnlyDirs(sourcePath):
         for entry in obj: #Iterate until you get inside the machine's directory containing both files and directories
@@ -139,7 +134,7 @@ def copyFilesToPoleReg(sourcePath, targetPath):
             os.system(command)
 
 
-def getOTPandPT(buffer):
+def getOTPandPT(buffer :  list[str]) -> tuple[str, str]:
     #Getting OTP
     otp = buffer[-1]
     if not fc.rightOTPFormat(otp):
@@ -156,47 +151,34 @@ def getOTPandPT(buffer):
             del buffer[index]
     except ValueError: #It means that there is no "-" used in the filename except in the OTP
         pt = buffer[-2]
-        if not pt.startswith("PT"):
+        if not fc.rightPTFormat(pt):
             pt = ""
             msg = f'Le n° de PT n\'est pas au bon format.\n'
             il.writeToInternalLog(msg)
 
     return otp, pt
 
-def findTargetDirectory(buffer, targetPath, endPart):
+def findTargetDirectory(buffer : list[str], targetPath : str, endPart : str) -> str:
     otp, pt = getOTPandPT(buffer)
     if otp == "" or pt == "":
-        msg = f'La sélection du dossier cible n\'est pas possible.\n'
+        msg = f'La sélection du dossier cible n\'est pas possible.\nVérifier le format de {buffer}.pdf\n'
         il.writeToInternalLog(msg)
         return ""
-
-    obj = os.scandir(targetPath)
-    for entry in obj:
-        temp = entry.name.split()
-        temp = temp[0]
-        if temp.startswith("ES0") or temp.startswith("IS0"): #Check if the current directory starts with the right OTP format
-            if temp == otp :
-                newTargetPath = os.path.join(targetPath, entry.name)
-                obj2 = os.scandir(newTargetPath)
-                for entry2 in obj2:
-                    temp2 = entry2.name.split()
-                    temp2 = temp2[-1]
-                    if temp2.startswith("PT"): #Check if the current directory starts with the right PT format
-                        if temp2 == pt:
-                            target = os.path.join(newTargetPath, entry2.name)
-                            target = os.path.join(target,endPart)
-                            return target
-                    else:
-                        newTargetPath = os.path.join(targetPath, entry2.name)
-                        msg = f'Le n° PT est absent ou son format est mauvais dans : "{newTargetPath}".\n'
-                        il.writeToInternalLog(msg)
-        else:
-            newTargetPath = os.path.join(targetPath, entry.name)
-            msg = f'L\'OTP est absent ou son format est mauvais dans : "{newTargetPath}".\n'
-            il.writeToInternalLog(msg)
+    repairs = sc.scan(targetPath)
+    for elt in repairs.projects:
+        if otp == elt.OTP:
+            for item in elt.machines :
+                if pt == item.PT:
+                    target = os.path.join(item.pathToThis, endPart)
+                    return target
+            msg = f'Le n° {pt} correspondant à {otp} n\'a pas été trouvé.\n'
+            il.writeToInternalLog(msg) 
+            return ""
+    msg = f'L\'OTP : {otp} n\'a pas été trouvé.\n'
+    il.writeToInternalLog(msg) 
     return ""
 
-def selectTargetDirectory(sourcePath, targetPath, endPart):
+def selectTargetDirectory(sourcePath : str, targetPath : str, endPart : str) -> str:
     dirName = getCERName(sourcePath)
     dirName = removeExtension(dirName)
     if dirName == "":
@@ -210,7 +192,7 @@ def selectTargetDirectory(sourcePath, targetPath, endPart):
     return target
 
 
-def copyFilesToPFH10(sourcePath, targetPath, endPart):
+def copyFilesToPFH10(sourcePath : str, targetPath : str, endPart :str):
     obj = os.scandir(sourcePath)
     if thereIsOnlyDirs(sourcePath):
         for entry in obj: #Iterate until you get inside the machine's directory containing both files and directories
@@ -223,6 +205,3 @@ def copyFilesToPFH10(sourcePath, targetPath, endPart):
         else:
             command = f'robocopy "{sourcePath}" "{target}" CER* /COPY:DATSO /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
             os.system(command)
-
-copyFilesToPoleReg(homePath, poleRegCERPath)
-copyFilesToPFH10(homePath, pfh10RepairsPath, pfh10RepairsEndPartBE)
