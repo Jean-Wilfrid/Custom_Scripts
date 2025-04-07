@@ -15,7 +15,10 @@ class Machine ():
 class Project ():
     def __init__(self, OTP : str = "", machines : list[Machine] = []):
         self.OTP = OTP
-        self.machines = machines
+        if machines == []:#The aim is to avoid the copy of the garbage of the previous call. This force "machines" to be an empty list when the argument is "[]". Otherwise, "machines" is initialised with the previous value.
+            self.machines = []
+        else:
+            self.machines = machines
 
     def setOTPValue(self, OTP : str = ""):
         self.OTP = OTP
@@ -31,7 +34,11 @@ class PFH10Repairs():
         self.projects.append(project)
 
 def getProjectsList(path : str) -> list:#Take a path and return a list of project name in that folder
-    obj = os.scandir(path)
+    try:
+        obj = os.scandir(path)
+    except FileNotFoundError:
+        msg = "Le chemin suivant est introuvable : " + path
+        il.writeToInternalLog(msg)
     plist = []
     for entry in obj:
         temp = entry.name.split()
@@ -40,7 +47,12 @@ def getProjectsList(path : str) -> list:#Take a path and return a list of projec
     return plist
 
 def getMachinesList(path : str) -> list[Machine]:#Scan a project directory and returns the list of machines inside
-    obj = os.scandir(path)
+    try:
+        obj = os.scandir(path)
+    except FileNotFoundError:
+        msg = "Le chemin suivant est introuvable : " + path + "\nLe nom du dossier ne respecte peut-être pas le format : 'OTP + espace + tiret + espace + Provenance'\n"
+        il.writeToInternalLog(msg)
+        return []
     mlist = []
     for entry in obj:
         if entry.is_dir() and fc.rightPTFormat(entry.name.split()[-1]):
@@ -77,19 +89,21 @@ def scan(path : str):#Scan the path
     slist = joinNames(slist)
 
     for elt in slist :
+        project = Project()
         project = linkMachinesToProject(path,elt)
         repairs.addProject(project)
     
     return repairs
 
-a = r"C:\Home\PREE\Test"
+a = r"C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS"
 #elt = "IS0-800442 - DOEL"
 #a = input("Entrer chemin :")
 #a = fc.toRaw(a)
 #b = linkMachinesToProject(a,elt)
+#b = "C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS\ES0-801400 - 5 Vireurs auxilliaires"
 b = scan(a)
 
 for p in b.projects:
-    print(p.OTP)
-    for m in p.machines:
-        print(m.PT)
+   print(p.OTP)
+   for m in p.machines:
+    print(m.PT)
