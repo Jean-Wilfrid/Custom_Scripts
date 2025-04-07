@@ -1,3 +1,8 @@
+"""
+Author : Jean-Wilfrid TOGNIBO
+Version : 2.0.0
+Release date : 07/04/2025
+"""
 import diffusionRevB as drb
 
 homePath = r"C:\Users\jt30320l\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Attente validation client\IS0-800574 Relais MEM"
