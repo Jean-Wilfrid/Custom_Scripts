@@ -94,16 +94,3 @@ def scan(path : str):#Scan the path
         repairs.addProject(project)
     
     return repairs
-
-a = r"C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS"
-#elt = "IS0-800442 - DOEL"
-#a = input("Entrer chemin :")
-#a = fc.toRaw(a)
-#b = linkMachinesToProject(a,elt)
-#b = "C:\Users\jt30320l\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS\ES0-801400 - 5 Vireurs auxilliaires"
-b = scan(a)
-
-for p in b.projects:
-   print(p.OTP)
-   for m in p.machines:
-    print(m.PT)
