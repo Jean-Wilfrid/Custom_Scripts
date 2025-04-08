@@ -1,13 +1,9 @@
 import os
+import scan as sc
+import internalLog as il
+import formatChecker as fc
 
-homePath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT"
-poleRegCERPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\2 - Expertise\Z_EXPERTISE 2024" #Try to automate the choice of this folder later
-pfh10RepairsPath = r"C:\Users\503404681\Box\Plateforme Hydraulique - GAIA\PFH10-SDP interservices\REPAIRS"
-pfh10RepairsEndPartBE = r"03-CER-PREE\02-CER indB - BE"
-testPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT\IS0-800396 7 Distributeurs 6 Bobines  4 CS1 2 CS2 CP0-CP1"
-tryPath = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\ATTENTE VALIDATION CLIENT\Essai"
-
-def thereIsOnlyDirs(subPath): # Check if there is only directories in this folder
+def thereIsOnlyDirs(subPath : str) -> bool: # Check if there is only directories in this folder
     obj = os.scandir(subPath) #Scan the dir and get iterable object
     so = True
     for entry in obj:
@@ -17,7 +13,7 @@ def thereIsOnlyDirs(subPath): # Check if there is only directories in this folde
 
     return so
 
-def getCERName(parentPath):
+def getCERName(parentPath : str) -> list[str]:
     obj = os.scandir(parentPath)
 
     rawName = ""
@@ -28,52 +24,68 @@ def getCERName(parentPath):
     
     return rawName
 
-def writeToInternalLog(msg):
-    print(msg)
-    file = open("internal_log.txt", "a+", encoding="utf-8")
-    file.write(msg)
-    file.close()
-
-def removeExtension(rawName):
+def removeExtension(rawName : list[str]) -> list[str]:
     try:
         buffer = rawName[-1].split(".") #Seperate the last part of the name and the extension name
     except IndexError: #This is certainly due to an emtpy string
         msg = "Il n'y a pas de fichier commençant par 'CER' ou 'CER_B'. Une chaîne vide continue le process.\n"
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return rawName
 
     del rawName[-1] #Delete the whole block
     rawName.append(buffer[0]) #Get back last part without the extension name in the main list
     return rawName
 
-
-def createTargetDirectoryName(buffer): 
-
-    finalLine = ""
-    #Getting id number
-    try: #In this case the filename begin with CER followed by a space i.e CER 24-10
+def getIDNumber(buffer : str) -> tuple[str,int]:
+    try: #In this case the filename begin with CER followed by a space i.e CER 24-010
         nums = buffer[1].split("-")
         num = int (nums[1])
-        i = 2 #This is the index of the first part of the machine's name its value change according to name's beginning
-    except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-10
+        i = 2 #This is the index of the first part of the machine's name. Its value change according to name's beginning
+    except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-010
         try:
             nums = buffer[0].split("-") 
             num = int (nums[1])
             i = 1 #This is the index of the first part of the machine's name its value change according to name's beginning
         except IndexError:
             msg = "Le format du nom du fichier CER ne permet pas la création du dossier.\n"
-            writeToInternalLog(msg)
-            return ""
+            il.writeToInternalLog(msg)
+            return "", i
 
     if num < 10 : #Adding a 0 at the beginnig to keep the naming style
         num = "0" + str(num)
     else:
         num = str(num)
+    
+    return num, i
 
-    #Getting OTP
-    otp = buffer[-1]
+def getYear(buffer : list[str]) -> str:
+    try: #In this case the filename begin with CER followed by a space i.e CER 24-010
+        id = buffer[1].split("-")
+        year = id[0]
+    except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-010
+        try:
+            id = buffer[0].split("-") 
+            year = id[3:5]#See this https://stackoverflow.com/questions/509211/how-slicing-in-python-works for further details about slicing in python
+        except IndexError:
+            msg = "Le format du nom du fichier CER ne permet pas la création du dossier.\n"
+            il.writeToInternalLog(msg)
+            return ""
+    
+    return year
 
-    #Getting machine's name
+def selectYearInPoleReg(buffer : list[str]) -> str:
+    year = getYear(buffer)
+    pathSelected = "Z_EXPERTISE 20" + year
+
+    return pathSelected
+
+def assembleTargetPathInPoleReg(path:str, buffer : list[str]) -> str:
+    pathSelected = selectYearInPoleReg(buffer)
+    pathSelected = os.path.join(path,pathSelected)
+
+    return pathSelected
+
+def getMachinesName(buffer :str, i : int) -> str:
     name = ""
     try:
         index = 1
@@ -87,23 +99,44 @@ def createTargetDirectoryName(buffer):
             name += " "
             i += 1
         name += buffer[index - 1]
-        #Final Line Merging
+
+    return name
+
+
+def createTargetDirectoryName(buffer : list[str]) -> str: 
+
+    #Getting id number
+    num,i = getIDNumber(buffer)
+
+    #Getting OTP
+    otp = buffer[-1]
+    if not fc.rightOTPFormat(otp):
+        otp = ""
+
+    #Getting machine's name
+    name = getMachinesName(buffer, i)
+
+    #Final Line Merging
+    if num =="" or otp == "" or name =="": #If there is any error, the line is set to empty
+        finalLine = ""
+    else:
         finalLine = num + " " + otp + " " + name
 
     return finalLine
 
-def createTargetDirectory (sourcePath, targetPath):
+def createTargetDirectory (sourcePath : str, targetPath : str) -> str:
 
     dirName = getCERName(sourcePath)
     dirName = removeExtension(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "{sourcePath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
+    targetPath = assembleTargetPathInPoleReg(targetPath, dirName)
     dirName = createTargetDirectoryName(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "{sourcePath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
     finalPath = os.path.join(targetPath,dirName)
 
@@ -114,9 +147,7 @@ def createTargetDirectory (sourcePath, targetPath):
 
     return finalPath
 
-#def writeDirNameToFile ():
-
-def copyFilesToPoleReg(sourcePath, targetPath):
+def copyFilesToPoleReg(sourcePath : str, targetPath : str):
     obj = os.scandir(sourcePath)
     if thereIsOnlyDirs(sourcePath):
         for entry in obj: #Iterate until you get inside the machine's directory containing both files and directories
@@ -127,17 +158,17 @@ def copyFilesToPoleReg(sourcePath, targetPath):
         if target == "":
             pass
         else:
-            command = f'robocopy "{sourcePath}" "{target}" /E /COPY:DATSO /DCOPY:DATE /MT[:16] /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
+            command = f'robocopy "{sourcePath}" "{target}" /E /COPY:DT /DCOPY:DT /MT[:16] /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
             os.system(command)
 
 
-def getOTPandPT(buffer):
+def getOTPandPT(buffer :  list[str]) -> tuple[str, str]:
     #Getting OTP
     otp = buffer[-1]
-    if not (otp.startswith("IS0") or otp.startswith("ES0")):
+    if not fc.rightOTPFormat(otp):
         otp = ""
         msg = f'L\'OTP n\'est pas au bon format.\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
 
     #Getting PT
     pt = ""
@@ -148,83 +179,57 @@ def getOTPandPT(buffer):
             del buffer[index]
     except ValueError: #It means that there is no "-" used in the filename except in the OTP
         pt = buffer[-2]
-        if not pt.startswith("PT"):
+        if not fc.rightPTFormat(pt):
             pt = ""
             msg = f'Le n° de PT n\'est pas au bon format.\n'
-            writeToInternalLog(msg)
+            il.writeToInternalLog(msg)
 
     return otp, pt
 
-def findTargetDirectory(buffer, targetPath, endPart):
+def findTargetDirectory(buffer : list[str], targetPath : str, endPart : str) -> str:
     otp, pt = getOTPandPT(buffer)
     if otp == "" or pt == "":
-        msg = f'La sélection du dossier cible n\'est pas possible.\n'
-        writeToInternalLog(msg)
+        msg = f'La sélection du dossier cible n\'est pas possible.\nVérifier le format de {buffer}.pdf\n'
+        il.writeToInternalLog(msg)
         return ""
-
-    obj = os.scandir(targetPath)
-    for entry in obj:
-        temp = entry.name.split()
-        temp = temp[0]
-        if temp.startswith("ES0") or temp.startswith("IS0"): #Check if the current directory starts with the right OTP format
-            if temp == otp :
-                newTargetPath = os.path.join(targetPath, entry.name)
-                obj2 = os.scandir(newTargetPath)
-                for entry2 in obj2:
-                    temp2 = entry2.name.split()
-                    temp2 = temp2[-1]
-                    if temp2.startswith("PT"): #Check if the current directory starts with the right PT format
-                        if temp2 == pt:
-                            target = os.path.join(newTargetPath, entry2.name)
-                            target = os.path.join(target,endPart)
-                            return target
-                    else:
-                        newTargetPath = os.path.join(targetPath, entry2.name)
-                        msg = f'Le n° PT est absent ou son format est mauvais dans : "{newTargetPath}".\n'
-                        writeToInternalLog(msg)
-        else:
-            newTargetPath = os.path.join(targetPath, entry.name)
-            msg = f'L\'OTP est absent ou son format est mauvais dans : "{newTargetPath}".\n'
-            writeToInternalLog(msg)
+    repairs = sc.scan(targetPath)
+    for elt in repairs.projects:
+        if otp == elt.OTP:
+            for item in elt.machines :
+                if pt == item.PT:
+                    target = os.path.join(item.pathToThis, endPart)
+                    return target
+            msg = f'Le n° {pt} correspondant à {otp} n\'a pas été trouvé.\n'
+            il.writeToInternalLog(msg) 
+            return ""
+    msg = f'L\'OTP : {otp} n\'a pas été trouvé.\n'
+    il.writeToInternalLog(msg) 
     return ""
 
-def selectTargetDirectory(sourcePath, targetPath, endPart):
+def selectTargetDirectory(sourcePath : str, targetPath : str, endPart : str) -> str:
     dirName = getCERName(sourcePath)
     dirName = removeExtension(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de trouver le dossier CER lié à : "{sourcePath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
         return ""
     target = findTargetDirectory(dirName, targetPath, endPart)
     if target == "":
         msg = f'La copie n\'est pas possible vers : "{targetPath}".\n'
-        writeToInternalLog(msg)
+        il.writeToInternalLog(msg)
     return target
 
 
-def copyFilesToPFH10(sourcePath, targetPath, endPart):
+def copyFilesToPFH10(sourcePath : str, targetPath : str, endPart :str):
     obj = os.scandir(sourcePath)
     if thereIsOnlyDirs(sourcePath):
         for entry in obj: #Iterate until you get inside the machine's directory containing both files and directories
-            print("Only Dirs")
-            print(entry.name)
             newSourcePath = os.path.join(sourcePath, entry.name)
             copyFilesToPFH10(newSourcePath, targetPath, endPart)
     else:
-        print
         target = selectTargetDirectory(sourcePath, targetPath, endPart)
         if target == "":
             pass
         else:
             command = f'robocopy "{sourcePath}" "{target}" CER* /COPY:DATSO /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
             os.system(command)
-
-
-#a = r"C:\Users\503404681\Box\y_POLE REGULATION\01 - Suivi PFH\8 - Partage CER\CER\Test"
-#b = r"03-CER-PREE\02-CER indB - BE"
-
-#command = f'robocopy "{a}" "{b}" CER* /COPY:DATSO /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
-#os.system(command)
-
-#copyFilesToPoleReg(homePath, poleRegCERPath)
-copyFilesToPFH10(homePath, pfh10RepairsPath, pfh10RepairsEndPartBE)
