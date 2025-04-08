@@ -1,0 +1,4 @@
+
+La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15703".
+Il n'y a pas de fichier commençant par 'CER' ou 'CER_B'. Une chaîne vide continue le process.
+La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Documents Amonts".

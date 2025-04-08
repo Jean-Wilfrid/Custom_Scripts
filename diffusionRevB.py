@@ -37,11 +37,11 @@ def removeExtension(rawName : list[str]) -> list[str]:
     return rawName
 
 def getIDNumber(buffer : str) -> tuple[str,int]:
-    try: #In this case the filename begin with CER followed by a space i.e CER 24-10
+    try: #In this case the filename begin with CER followed by a space i.e CER 24-010
         nums = buffer[1].split("-")
         num = int (nums[1])
         i = 2 #This is the index of the first part of the machine's name. Its value change according to name's beginning
-    except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-10
+    except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-010
         try:
             nums = buffer[0].split("-") 
             num = int (nums[1])
@@ -57,6 +57,33 @@ def getIDNumber(buffer : str) -> tuple[str,int]:
         num = str(num)
     
     return num, i
+
+def getYear(buffer : list[str]) -> str:
+    try: #In this case the filename begin with CER followed by a space i.e CER 24-010
+        id = buffer[1].split("-")
+        year = id[0]
+    except IndexError: #In this one, the file's name begin with CER followed by the id number with no space i.e CER24-010
+        try:
+            id = buffer[0].split("-") 
+            year = id[3:5]#See this https://stackoverflow.com/questions/509211/how-slicing-in-python-works for further details about slicing in python
+        except IndexError:
+            msg = "Le format du nom du fichier CER ne permet pas la création du dossier.\n"
+            il.writeToInternalLog(msg)
+            return ""
+    
+    return year
+
+def selectYearInPoleReg(buffer : list[str]) -> str:
+    year = getYear(buffer)
+    pathSelected = "Z_EXPERTISE 20" + year
+
+    return pathSelected
+
+def assembleTargetPathInPoleReg(path:str, buffer : list[str]) -> str:
+    pathSelected = selectYearInPoleReg(buffer)
+    pathSelected = os.path.join(path,pathSelected)
+
+    return pathSelected
 
 def getMachinesName(buffer :str, i : int) -> str:
     name = ""
@@ -105,6 +132,7 @@ def createTargetDirectory (sourcePath : str, targetPath : str) -> str:
         msg = f'La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "{sourcePath}".\n'
         il.writeToInternalLog(msg)
         return ""
+    targetPath = assembleTargetPathInPoleReg(targetPath, dirName)
     dirName = createTargetDirectoryName(dirName)
     if dirName == "":
         msg = f'La chaîne de caractères reçue ne permet pas de créer le dossier CER lié à : "{sourcePath}".\n'
@@ -130,7 +158,7 @@ def copyFilesToPoleReg(sourcePath : str, targetPath : str):
         if target == "":
             pass
         else:
-            command = f'robocopy "{sourcePath}" "{target}" /E /COPY:DATSO /DCOPY:DATE /MT[:16] /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
+            command = f'robocopy "{sourcePath}" "{target}" /E /COPY:DT /DCOPY:DT /MT[:16] /UNILOG+:output.txt /ETA /TEE'  #See help robocopy in a cmd to get more details
             os.system(command)
 
 

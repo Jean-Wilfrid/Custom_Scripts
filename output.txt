@@ -1,0 +1,250 @@
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  DÇmarrageˇ: mardi 8 avril 2025 16:27:16
+   Source : C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\
+     Dest : C:\Home\PREE\Test\Pole_Reg\Z_EXPERTISE 2024\106 IS0-800443 BOBINE CP0 CP1 PT118\
+
+    Fichiers : *.*
+	    
+  Options : *.* /TEE /S /E /DCOPY:DT /COPY:DT /ETA /MT:8 /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	  Nouveau fichier		  798917	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\CER 24-106 BOBINE CP0 CP1 PT118 IS0-800443.pdf  0%  100%  
+	  Nouveau fichier		   5.7 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\CER 24-106 BOBINE CP0 CP1 PT118 IS0-800443.xlsx100%  
+	  Nouveau fichier		   2.7 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Expertise bobine PT118 corrigÇe.pdf100%  
+	  Nouveau fichier		  366924	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\FAAS249884_B BOBINE IS0-800443.pdf100%  
+	  Nouveau fichier		   1.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\1.JPG100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\10.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\2.JPG100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\3.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\4.JPG100%  
+	  Nouveau fichier		   1.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\5.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\6.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\7.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\8.JPG100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\9.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\IMG_7332.JPG100%  
+	  Nouveau fichier		   1.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\IMG_7337.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT118\Photo\IMG_7338.JPG100%  
+
+-------------------------------------------------------------------------------
+
+               Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
+     RÇpˇ:         2         2         1         0         0         0
+Fichiersˇ:        17        17         0         0         0         0
+  Octetsˇ:   28.72 m   28.72 m         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   DÇbitˇ:           885ˇ926ˇ176 Octets/sec.
+   DÇbitˇ:             50693,102 MÇga-octets/min.
+   Fin : mardi 8 avril 2025 16:27:16
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  DÇmarrageˇ: mardi 8 avril 2025 16:27:24
+   Source : C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\
+     Dest : C:\Home\PREE\Test\Pole_Reg\Z_EXPERTISE 2024\105 IS0-800443 BOBINE CP0 CP1 PT178\
+
+    Fichiers : *.*
+	    
+  Options : *.* /TEE /S /E /DCOPY:DT /COPY:DT /ETA /MT:8 /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	  Nouveau fichier		  880108	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\CER 24-105 BOBINE CP0 CP1 PT178 IS0-800443.pdf  0%  100%  
+	  Nouveau fichier		   6.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\CER 24-105 BOBINE CP0 CP1 PT178 IS0-800443.xlsx100%  
+	  Nouveau fichier		   2.8 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Expertise bobine PT178 corrigÇe.pdf100%  
+	  Nouveau fichier		  366924	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\FAAS249884_B BOBINE IS0-800443.pdf100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\1.JPG100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\10.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\11.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\12.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\13.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\14.JPG100%  
+	  Nouveau fichier		   1.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\2.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\3.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\4.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\5.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\6.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\7.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\8.JPG100%  
+	  Nouveau fichier		   1.8 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\9.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7343.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7348.JPG100%  
+	  Nouveau fichier		   1.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7353.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7362.JPG100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7364.JPG100%  
+	  Nouveau fichier		   1.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7367.JPG100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\Bobine - PT178\Photo\IMG_7368.JPG100%  
+
+-------------------------------------------------------------------------------
+
+               Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
+     RÇpˇ:         2         2         1         0         0         0
+Fichiersˇ:        25        25         0         0         0         0
+  Octetsˇ:   41.93 m   41.93 m         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   DÇbitˇ:           879ˇ426ˇ520 Octets/sec.
+   DÇbitˇ:             50321,188 MÇga-octets/min.
+   Fin : mardi 8 avril 2025 16:27:24
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  DÇmarrageˇ: mardi 8 avril 2025 16:27:27
+   Source : C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\
+     Dest : C:\Home\PREE\Test\Pole_Reg\Z_EXPERTISE 20Cylindre\109 IS0-800443 Cylindre SÇcuritÇ CS1 PT15678\
+
+    Fichiers : *.*
+	    
+  Options : *.* /TEE /S /E /DCOPY:DT /COPY:DT /ETA /MT:8 /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	  Nouveau fichier		   3.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\754W45069_MC - CER24-109 Cylindre SÇcuritÇ CS1 750S50112 PT15678.pdf  0%  100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\CER24-109 Cylindre SÇcuritÇ CS1 - PT15678 - IS0-800443.pdf100%  
+	  Nouveau fichier		   7.7 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\CER24-109 Cylindre SÇcuritÇ CS1 - PT15678 - IS0-800443.xlsx100%  
+	  Nouveau fichier		  422357	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\FAAS249886 CYLINDRE SECURITE CS1 IS0-800443.pdf100%  
+	  Nouveau fichier		   2.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241202_135952.jpg100%  
+	  Nouveau fichier		   2.0 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241202_135956.jpg100%  
+	  Nouveau fichier		   2.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241202_140005.jpg100%  
+	  Nouveau fichier		   2.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241202_140014.jpg100%  
+	  Nouveau fichier		   2.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241202_140022.jpg100%  
+	  Nouveau fichier		   2.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241202_140026.jpg100%  
+	  Nouveau fichier		   2.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153258.jpg100%  
+	  Nouveau fichier		   2.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153305.jpg100%  
+	  Nouveau fichier		   2.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153319.jpg100%  
+	  Nouveau fichier		   3.0 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153333.jpg100%  
+	  Nouveau fichier		   2.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153357.jpg100%  
+	  Nouveau fichier		   2.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153408.jpg100%  
+	  Nouveau fichier		   2.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153411.jpg100%  
+	  Nouveau fichier		   2.6 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153441.jpg100%  
+	  Nouveau fichier		   2.5 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153449.jpg100%  
+	  Nouveau fichier		   2.9 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241203_153506.jpg100%  
+	  Nouveau fichier		   2.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241204_091157.jpg100%  
+	  Nouveau fichier		   2.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15678\Photos\20241204_091205.jpg100%  
+
+-------------------------------------------------------------------------------
+
+               Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
+     RÇpˇ:         2         2         1         0         0         0
+Fichiersˇ:        22        22         0         0         0         0
+  Octetsˇ:   58.38 m   58.38 m         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   DÇbitˇ:           1ˇ249ˇ404ˇ326 Octets/sec.
+   DÇbitˇ:               71491,492 MÇga-octets/min.
+   Fin : mardi 8 avril 2025 16:27:27
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  DÇmarrageˇ: mardi 8 avril 2025 16:27:30
+   Source : C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\
+     Dest : C:\Home\PREE\Test\Pole_Reg\Z_EXPERTISE 20Cylindre\107 IS0-800443 Cylindre SÇcuritÇ CS1 PT15680\
+
+    Fichiers : *.*
+	    
+  Options : *.* /TEE /S /E /DCOPY:DT /COPY:DT /ETA /MT:8 /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	  Nouveau fichier		   3.0 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\754W45069_MC - CER24-107 Cylindre SÇcuritÇ CS1 750S50112 PT15680.pdf  0%  100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\CER24-107 Cylindre SÇcuritÇ CS1 - PT15680 - IS0-800443.pdf100%  
+	  Nouveau fichier		  10.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\CER24-107 Cylindre SÇcuritÇ CS1 - PT15680 - IS0-800443.xlsx100%  
+	  Nouveau fichier		  422357	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\FAAS249886 CYLINDRE SECURITE CS1 IS0-800443.pdf100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103726_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103746_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103749_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103751_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103753_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103756_Gallery.jpg100%  
+	  Nouveau fichier		  998670	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103821_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103828_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103834_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103839_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103848_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103856_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103858_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103901_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103924_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103944_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15680\Photo\Screenshot_20241216_103949_Gallery.jpg100%  
+
+-------------------------------------------------------------------------------
+
+               Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
+     RÇpˇ:         2         2         1         0         0         0
+Fichiersˇ:        21        21         0         0         0         0
+  Octetsˇ:   35.33 m   35.33 m         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   DÇbitˇ:           805ˇ476ˇ543 Octets/sec.
+   DÇbitˇ:             46089,738 MÇga-octets/min.
+   Fin : mardi 8 avril 2025 16:27:30
+
+
+-------------------------------------------------------------------------------
+   ROBOCOPY   ::   Copie de fichiers robuste pour Windows     
+-------------------------------------------------------------------------------
+
+  DÇmarrageˇ: mardi 8 avril 2025 16:39:47
+   Source : C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\
+     Dest : C:\Home\PREE\Test\Pole_Reg\Z_EXPERTISE 20Cylindre\108 IS0-800443 Cylindre SÇcuritÇ CS1 PT15706\
+
+    Fichiers : *.*
+	    
+  Options : *.* /TEE /S /E /DCOPY:DT /COPY:DT /ETA /MT:8 /R:1000000 /W:30 
+
+-------------------------------------------------------------------------------
+
+	  Nouveau fichier		   3.0 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\754W45069_MC - CER24-108 Cylindre SÇcuritÇ CS1 750S50112 PT15706.pdf  0%  100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\CER24-108 Cylindre SÇcuritÇ CS1 - PT15706 - IS0-800443.pdf100%  
+	  Nouveau fichier		   8.4 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\CER24-108 Cylindre SÇcuritÇ CS1 - PT15706 - IS0-800443.xlsx100%  
+	  Nouveau fichier		  422357	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\FAAS249886 CYLINDRE SECURITE CS1 IS0-800443.pdf100%  
+	  Nouveau fichier		   5.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\20241217_092313.jpg100%  
+	  Nouveau fichier		   5.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\20241217_092338.jpg100%  
+	  Nouveau fichier		   5.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\20241217_092344.jpg100%  
+	  Nouveau fichier		   5.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\20241217_092357.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085318_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085320_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085324_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085330_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085338_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085342_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085345_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085348_Gallery.jpg100%  
+	  Nouveau fichier		   1.3 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085353_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085359_Gallery.jpg100%  
+	  Nouveau fichier		   1.1 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085408_Gallery.jpg100%  
+	  Nouveau fichier		   1.2 m	C:\Home\PREE\Test\Attente\IS0-800443 2 SM SRP & BOBINE DISTRI CS1\CS1 PT15706\PHOTOS\Screenshot_20241219_085440_Gallery.jpg100%  
+
+-------------------------------------------------------------------------------
+
+               Total     CopiÇ    IgnorÇDiscordance     êCHEC    Extras
+     RÇpˇ:         2         2         1         0         0         0
+Fichiersˇ:        20        20         0         0         0         0
+  Octetsˇ:   49.72 m   49.72 m         0         0         0         0
+   Heures:   0:00:00   0:00:00                       0:00:00   0:00:00
+
+
+   DÇbitˇ:           965ˇ648ˇ703 Octets/sec.
+   DÇbitˇ:             55254,863 MÇga-octets/min.
+   Fin : mardi 8 avril 2025 16:39:48
+
